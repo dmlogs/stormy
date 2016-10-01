@@ -1,0 +1,3 @@
+# Stormy
+
+Weather data aggregator.
