@@ -3,6 +3,16 @@
 Weather data aggregator.
 Ski forecasts.
 
+## API
+
+- ### /api/external
+  - #### /api/external/weathergov
+    - Query Parameters:
+      - lat: latitude (*required*)
+      - long: longitude (*required*)
+    - Returns: Raw json response from weathergov
+    - Example: */api/external/weathergov?lat=45.5278&long=-122.8013*
+
 ## Weather Data
 
 - ### Weather Underground
@@ -31,8 +41,8 @@ Ski forecasts.
   - ###### API
     - Free to consume.
     - Based on lat/lon
-    - [Example](http://forecast.weather.gov/MapClick.php?lat=45.5278&lon=-122.8013&unit=0&lg=english&FcstType=json)
     - 7 + nights
+    - [Example](http://forecast.weather.gov/MapClick.php?lat=45.5278&lon=-122.8013&unit=0&lg=english&FcstType=json)
     - [XML Documentation](http://graphical.weather.gov/xml/), have not found json documentation, but API appears to work.
 
 - ### Dark Sky
