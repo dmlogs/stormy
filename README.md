@@ -5,18 +5,17 @@ Ski forecasts.
 
 ## API
 
-- ### /api/external
-  - #### /api/external/weathergov
-    - Query Parameters:
-      - lat: latitude (*required*)
-      - long: longitude (*required*)
-    - Returns: Raw json response from weathergov
-    - Example: */api/external/weathergov?lat=45.5278&long=-122.8013*
+- **/api/external/weathergov**
+  - Query Parameters:
+    - lat: latitude (*required*)
+    - long: longitude (*required*)
+  - Returns: Raw json response from weathergov
+  - Example: */api/external/weathergov?lat=45.5278&long=-122.8013*
 
 ## Weather Data
 
 - ### Weather Underground
-  - ###### API
+  - #### API
     - Free tier limited to 500 calls per day; Certain features more expensive outside of free tier.
     - Current Conditions
     - Hourly 1 day forecast
@@ -25,20 +24,20 @@ Ski forecasts.
     - Hourly 10 day forecast
 
 - ### Yahoo Weather
-  - ###### API
+  - #### API
     - Free tier, 2000 calls per day
     - Forecast for today and tomorrow
 
 - ### Open Weather Map
 
-  - ###### API
+  - #### API
     - Free tier
     - 5 days / 3 hour forecast api
     - Limited to 60 calls per minute
 
 - ### Weather.gov
 
-  - ###### API
+  - #### API
     - Free to consume.
     - Based on lat/lon
     - 7 + nights
@@ -47,7 +46,7 @@ Ski forecasts.
 
 - ### Dark Sky
 
-  - ###### API
+  - #### API
     - Free for first 1,000 rq per day
     - Hourly data up to 7 days
     - Required to display [Powered by Dark Sky](https://darksky.net/poweredby/) prominently in the app/service.
