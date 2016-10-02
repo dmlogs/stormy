@@ -8,7 +8,7 @@ module.exports = (defaults) => {
     return {
         requestHandler: function(req, res) {
             if (!req.query.lat) {
-                res.status(400).send("missing latitude");
+                res.status(400).send("missing latitude.");
                 return;
             };
             if (!req.query.long) {
@@ -25,9 +25,9 @@ module.exports = (defaults) => {
             this.fetch(lat, long, unit, lg, fcstType, function(data) {
                 res.status(200).send(data);
             }, function(err) {
-                res.status(500).send({
+                res.status(404).send({
                     'error': err
-                })
+                });
             });
         },
         fetch: function(lat, long, unit, lg, fcstType, callback, error) {
