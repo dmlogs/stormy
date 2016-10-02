@@ -1,6 +1,10 @@
 var http = require('http');
 
 module.exports = (defaults) => {
+    defaults.unit = defaults.unit || 0;
+    defaults.lg = defaults.lg || "english";
+    defaults.fcstType = defaults.fcstType || "json";
+
     return {
         requestHandler: function(req, res) {
             if (!req.query.lat) {

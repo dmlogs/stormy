@@ -1,6 +1,6 @@
 var express = require('express');
 var config = require('config');
-var weathergov = require('./weathergov.js')(config.get("weathergov"));
+var weathergov = require('./services/weathergov.js')(config.get("weathergov"));
 
 var app = express();
 
