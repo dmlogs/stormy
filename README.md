@@ -2,6 +2,30 @@
 
 Weather data aggregator. Ski forecasts.
 
+## Install
+
+```
+npm install
+```
+
+## Run application
+
+```
+# via npm
+npm start
+```
+
+```
+# via node
+node index.js
+```
+
+## Run tests
+
+```
+npm test
+```
+
 ## API
 
 - **/api/external/weathergov**
@@ -13,6 +37,18 @@ Weather data aggregator. Ski forecasts.
 
   - Returns: Raw json response from weathergov
   - Example: _/api/external/weathergov?lat=45.5278&long=-122.8013_
+
+
+
+- **/api/external/darksky**
+
+  - Query Parameters:
+
+    - lat: latitude (_required_)
+    - long: longitude (_required_)
+
+  - Returns: Raw json response from weathergov
+  - Example: _/api/external/darksky?lat=45.5278&long=-122.8013_
 
 ## Weather Data
 
