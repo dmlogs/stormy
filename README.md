@@ -22,11 +22,13 @@ Ski forecasts.
     - 3 day forecast
     - 10 day forecast
     - Hourly 10 day forecast
+    - [Documentation](https://www.wunderground.com/weather/api/d/docs)
 
 - ### Yahoo Weather
   - **API**
     - Free tier, 2000 calls per day
     - Forecast for today and tomorrow
+    - [Documentation](https://developer.yahoo.com/weather/)
 
 - ### Open Weather Map
 
@@ -34,6 +36,7 @@ Ski forecasts.
     - Free tier
     - 5 days / 3 hour forecast api
     - Limited to 60 calls per minute
+    - [Documentation](https://openweathermap.org/api)
 
 - ### Weather.gov
 
@@ -50,6 +53,7 @@ Ski forecasts.
     - Free for first 1,000 rq per day
     - Hourly data up to 7 days
     - Required to display [Powered by Dark Sky](https://darksky.net/poweredby/) prominently in the app/service.
+    - [Documentation](https://darksky.net/dev/docs)
 
 
 ## Ski Resorts?
