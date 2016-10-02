@@ -4,6 +4,7 @@
     "description": "weather data aggregator",
     "main": "index.js",
     "scripts": {
+        "start": "node index.js",
         "test": "./node_modules/.bin/mocha --reporter spec --recursive"
     },
     "keywords": [
