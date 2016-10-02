@@ -1,21 +1,25 @@
 # Stormy
 
-Weather data aggregator.
-Ski forecasts.
+Weather data aggregator. Ski forecasts.
 
 ## API
 
 - **/api/external/weathergov**
+
   - Query Parameters:
-    - lat: latitude (*required*)
-    - long: longitude (*required*)
+
+    - lat: latitude (_required_)
+    - long: longitude (_required_)
+
   - Returns: Raw json response from weathergov
-  - Example: */api/external/weathergov?lat=45.5278&long=-122.8013*
+  - Example: _/api/external/weathergov?lat=45.5278&long=-122.8013_
 
 ## Weather Data
 
 - ### Weather Underground
+
   - **API**
+
     - Free tier limited to 500 calls per day; Certain features more expensive outside of free tier.
     - Current Conditions
     - Hourly 1 day forecast
@@ -25,7 +29,9 @@ Ski forecasts.
     - [Documentation](https://www.wunderground.com/weather/api/d/docs)
 
 - ### Yahoo Weather
+
   - **API**
+
     - Free tier, 2000 calls per day
     - Forecast for today and tomorrow
     - [Documentation](https://developer.yahoo.com/weather/)
@@ -33,6 +39,7 @@ Ski forecasts.
 - ### Open Weather Map
 
   - **API**
+
     - Free tier
     - 5 days / 3 hour forecast api
     - Limited to 60 calls per minute
@@ -41,6 +48,7 @@ Ski forecasts.
 - ### Weather.gov
 
   - **API**
+
     - Free to consume.
     - Based on lat/lon
     - 7 + nights
@@ -50,11 +58,11 @@ Ski forecasts.
 - ### Dark Sky
 
   - **API**
+
     - Free for first 1,000 rq per day
     - Hourly data up to 7 days
     - Required to display [Powered by Dark Sky](https://darksky.net/poweredby/) prominently in the app/service.
     - [Documentation](https://darksky.net/dev/docs)
-
 
 ## Ski Resorts?
 
