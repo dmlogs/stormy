@@ -39,14 +39,14 @@ module.exports = (defaults) => {
                 "headers": {
                     "User-Agent": "curl/7.43.0"
                 }
-            }, (resp) => {
+            }, (res) => {
                 var raw = "";
-                resp.on('data', (chunk) => {
+                res.on('data', (chunk) => {
                     raw += chunk;
                 });
-                resp.on('end', () => {
+                res.on('end', () => {
                     callback(raw);
-                })
+                });
             }).on('error', (err) => {
                 error(err);
             });
