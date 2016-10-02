@@ -6,5 +6,9 @@
         "unit": 0,
         "lg": "english",
         "fcstType": "json"
+    },
+    "darksky": {
+      "endpoint": "api.darksky.net",
+      "pathRoot": "/forecast"
     }
 }
