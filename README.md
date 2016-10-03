@@ -35,7 +35,7 @@ npm test
     - lat: latitude (_required_)
     - long: longitude (_required_)
 
-  - Returns: Raw json response from weathergov
+  - Returns: weather report for weathergov.
   - Example: _/api/external/weathergov?lat=45.5278&long=-122.8013_
 
 
@@ -46,8 +46,11 @@ npm test
 
     - lat: latitude (_required_)
     - long: longitude (_required_)
+    - f: format
+      - (blank) ⇒ raw
+      - std ⇒ standadized response
 
-  - Returns: Raw json response from weathergov
+  - Returns: weather report for darksky.
   - Example: _/api/external/darksky?lat=45.5278&long=-122.8013_
 
 ## Weather Data

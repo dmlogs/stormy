@@ -17,7 +17,7 @@ describe("weathergov", function() {
         lat = 45.5278,
         long = -122.8013;
 
-    function testResponseBody(data) {
+    function verifyResponseBody(data) {
         assert.isNotNull(JSON.parse(data).operationalMode);
     }
 
@@ -32,7 +32,7 @@ describe("weathergov", function() {
                     defaults.lg,
                     defaults.fcstType,
                     function(data) {
-                        testResponseBody(data);
+                        verifyResponseBody(data);
                         done();
                     },
                     function(err) {
@@ -50,7 +50,7 @@ describe("weathergov", function() {
             try {
                 function validation(status, body) {
                     assert.equal(status, 200);
-                    testResponseBody(body);
+                    verifyResponseBody(body);
                     done();
                 }
 

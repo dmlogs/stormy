@@ -9,6 +9,8 @@
     },
     "darksky": {
       "endpoint": "api.darksky.net",
-      "pathRoot": "/forecast"
+      "pathRoot": "/forecast",
+      "exclude": "minutely,hourly,alerts,flags",
+      "reportPath": "https://darksky.net"
     }
 }
