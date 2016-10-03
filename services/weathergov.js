@@ -105,7 +105,7 @@ module.exports = (defaults) => {
                     temp.temperatureMin = json.data.temperature[i];
                 }
 
-                var currentPrecipProbability = json.data.pop[i];
+                var currentPrecipProbability = json.data.pop[i] || 0;
 
                 temp.precipProbability = (
                     temp.precipProbability == undefined ? currentPrecipProbability : (
