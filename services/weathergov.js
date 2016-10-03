@@ -113,7 +113,7 @@ module.exports = (defaults) => {
                     )
                 );
 
-                temp.summary = (temp.summary ? temp.summary + ". Then " : "") + json.data.weather;
+                temp.summary = (temp.summary ? temp.summary + ". Then " : "") + json.data.weather[i];
 
             }
 
