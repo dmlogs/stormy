@@ -22,19 +22,19 @@ describe("darksky", function() {
         assert.equal(lat, JSON.parse(data).latitude);
     }
 
-    function verifyStandardizedResponse(result, latitude,longitude) {
-      latitude = latitude || 42.3601;
-      longitude = longitude || -71.0589;
+    function verifyStandardizedResponse(result, latitude, longitude) {
+        latitude = latitude || 42.3601;
+        longitude = longitude || -71.0589;
 
-      assert.equal(`https://darksky.net/${latitude},${longitude}`,result.report);
-      assert.isNotNull(result.lat);
-      assert.isNotNull(result.long);
-      assert.isNotNull(result.current);
-      assert.isNotNull(result.current.timestamp);
-      assert.isNotNull(result.current.temperature);
-      assert.isNotNull(result.current.summary);
-      assert.isNotNull(result.daily);
-      assert.equal(8,result.daily.length);
+        assert.equal(`https://darksky.net/${latitude},${longitude}`, result.report);
+        assert.isNotNull(result.lat);
+        assert.isNotNull(result.long);
+        assert.isNotNull(result.current);
+        assert.isNotNull(result.current.timestamp);
+        assert.isNotNull(result.current.temperature);
+        assert.isNotNull(result.current.summary);
+        assert.isNotNull(result.daily);
+        assert.equal(8, result.daily.length);
     }
 
     describe("#fetch()", function() {
@@ -73,23 +73,23 @@ describe("darksky", function() {
             }
         });
 
-        it('should return the standardize json in a response with status 200', function(done) {
+        it('should return the standardized json in a response with status 200', function(done) {
             try {
-              function validation(status, body) {
-                assert.equal(status, 200);
-                verifyStandardizedResponse(body,lat,long);
-                done();
-              }
+                function validation(status, body) {
+                    assert.equal(status, 200);
+                    verifyStandardizedResponse(body, lat, long);
+                    done();
+                }
 
-              var darksky = darkskyWrapper(defaults),
-              req = new MockReq(),
-              res = new MockRes(validation);
+                var darksky = darkskyWrapper(defaults),
+                    req = new MockReq(),
+                    res = new MockRes(validation);
 
-              req.setLatLong(lat,long);
-              req.query.f = "std";
-              darksky.requestHandler(req, res);
+                req.setLatLong(lat, long);
+                req.query.f = "std";
+                darksky.requestHandler(req, res);
             } catch (e) {
-              done(e);
+                done(e);
             }
         });
 
@@ -133,12 +133,12 @@ describe("darksky", function() {
     });
 
     describe("#standardizeResponse()", function() {
-      var darkskySampleResponse = fs.readFileSync('./test/data/darkskySampleResponse.json');
+        var darkskySampleResponse = fs.readFileSync('./test/data/darkskySampleResponse.json');
 
-      it('should parse and standardize the response', function() {
-        var darksky = darkskyWrapper(defaults);
-        var result = darksky.standardizeResponse(darkskySampleResponse);
-        verifyStandardizedResponse(result);
-      });
+        it('should parse and standardize the response', function() {
+            var darksky = darkskyWrapper(defaults);
+            var result = darksky.standardizeResponse(darkskySampleResponse);
+            verifyStandardizedResponse(result);
+        });
     });
 });

@@ -1,0 +1,60 @@
+{
+    "operationalMode": "Production",
+    "srsName": "WGS 1984",
+    "creationDate": "2016-10-03T09:54:44-07:00",
+    "creationDateLocal": "3 Oct 11:35 am PDT",
+    "productionCenter": "Portland, OR",
+    "credit": "http://www.wrh.noaa.gov/pqr",
+    "moreInformation": "http://weather.gov",
+    "location": {
+        "region": "wrh",
+        "latitude": "45.53",
+        "longitude": "-122.8",
+        "elevation": "361",
+        "wfo": "PQR",
+        "timezone": "P|Y|8",
+        "areaDescription": "2 Miles N Cedar Hills OR",
+        "radar": "KRTX",
+        "zone": "ORZ006",
+        "county": "ORC067",
+        "firezone": "ORZ604",
+        "metar": "KHIO"
+    },
+    "time": {
+        "layoutKey": "k-p12h-n13-1",
+        "startPeriodName": ["This Afternoon", "Tonight", "Tuesday", "Tuesday Night", "Wednesday", "Wednesday Night", "Thursday", "Thursday Night", "Friday", "Friday Night", "Saturday", "Saturday Night", "Sunday"],
+        "startValidTime": ["2016-10-03T12:00:00-07:00", "2016-10-03T18:00:00-07:00", "2016-10-04T06:00:00-07:00", "2016-10-04T18:00:00-07:00", "2016-10-05T06:00:00-07:00", "2016-10-05T18:00:00-07:00", "2016-10-06T06:00:00-07:00", "2016-10-06T18:00:00-07:00", "2016-10-07T06:00:00-07:00", "2016-10-07T18:00:00-07:00", "2016-10-08T06:00:00-07:00", "2016-10-08T18:00:00-07:00", "2016-10-09T06:00:00-07:00"],
+        "tempLabel": ["High", "Low", "High", "Low", "High", "Low", "High", "Low", "High", "Low", "High", "Low", "High"]
+    },
+    "data": {
+        "temperature": ["61", "48", "60", "53", "61", "49", "62", "51", "62", "52", "63", "53", "64"],
+        "pop": ["20", "70", "80", "80", "80", "40", "30", null, null, null, null, null, null],
+        "weather": ["Slight Chance Rain", "Rain Likely", "Showers", "Showers", "Showers", "Chance Showers", "Chance Showers", "Chance Rain", "Rain Likely", "Rain Likely", "Chance Rain", "Rain Likely", "Chance Rain"],
+        "iconLink": ["http://forecast.weather.gov/newimages/medium/ra20.png", "http://forecast.weather.gov/newimages/medium/nra70.png", "http://forecast.weather.gov/newimages/medium/shra80.png", "http://forecast.weather.gov/newimages/medium/nshra80.png", "http://forecast.weather.gov/newimages/medium/shra80.png", "http://forecast.weather.gov/newimages/medium/nshra40.png", "http://forecast.weather.gov/newimages/medium/shra30.png", "http://forecast.weather.gov/newimages/medium/nra.png", "http://forecast.weather.gov/newimages/medium/ra.png", "http://forecast.weather.gov/newimages/medium/nra.png", "http://forecast.weather.gov/newimages/medium/ra.png", "http://forecast.weather.gov/newimages/medium/nra.png", "http://forecast.weather.gov/newimages/medium/ra.png"],
+        "hazard": [],
+        "hazardUrl": [],
+        "text": ["A 20 percent chance of rain. Mostly cloudy, with a high near 61. South wind around 6 mph. ", "Rain likely before 11pm, then showers likely after 11pm. Cloudy, with a low around 48. South southwest wind 6 to 8 mph. Chance of precipitation is 70%. New precipitation amounts between a tenth and quarter of an inch possible. ", "Showers likely, then showers and possibly a thunderstorm after 11am. High near 60. South wind 8 to 14 mph, with gusts as high as 21 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible. ", "Showers likely and possibly a thunderstorm, then showers after 8pm. Low around 53. South wind 11 to 14 mph, with gusts as high as 21 mph. Chance of precipitation is 80%. New precipitation amounts between a quarter and half of an inch possible. ", "Showers, with thunderstorms also possible after 11am. High near 61. West southwest wind 10 to 13 mph, with gusts as high as 20 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible. ", "A 40 percent chance of showers, mainly before 11pm. Mostly cloudy, with a low around 49.", "A 30 percent chance of showers, mainly before 11am. Mostly cloudy, with a high near 62.", "A chance of rain. Mostly cloudy, with a low around 51.", "Rain likely. Mostly cloudy, with a high near 62.", "Rain likely. Mostly cloudy, with a low around 52.", "A chance of rain. Mostly cloudy, with a high near 63.", "Rain likely. Mostly cloudy, with a low around 53.", "A chance of rain. Mostly cloudy, with a high near 64."]
+    },
+    "currentobservation": {
+        "id": "KHIO",
+        "name": "Portland, Portland-Hillsboro Airport",
+        "elev": "203",
+        "latitude": "45.54806",
+        "longitude": "-122.95444",
+        "Date": "03 Oct 11:35 am PDT ",
+        "Temp": "54",
+        "Dewp": "46",
+        "Relh": "77",
+        "Winds": "3",
+        "Windd": "170",
+        "Gust": "NA",
+        "Weather": "Overcast",
+        "Weatherimage": "ovc.png",
+        "Visibility": "10.00",
+        "Altimeter": "NA",
+        "SLP": "29.96",
+        "timezone": "PDT",
+        "state": "OR",
+        "WindChill": "NA"
+    }
+}
