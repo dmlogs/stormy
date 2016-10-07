@@ -1,4 +1,4 @@
-module.exports = (defaults, fetch) => {
+module.exports = (defaults, fetcher) => {
     if (defaults.secret == undefined) {
         throw ("secret is not defined. Please add the configuration darksky.secret which is the secret key needed to use the Dark Sky API.");
     }
@@ -18,10 +18,18 @@ module.exports = (defaults, fetch) => {
       }, error);
     }
 
-    darksky.fetch = function(lat, long, callback, error) {
-        var path = `${defaults.pathRoot}/${defaults.secret}/${lat},${long}?exclude=${defaults.exclude}`
+    darksky.getPath = function (root,lat,long,secret,excludes) {
+      var path = (secret ? `${root}/${secret}` : root) + `/${lat},${long}`;
 
-        fetch.getHttps({
+      if (excludes) path += `?exclude=${excludes}`;
+
+      return path;
+    }
+
+    darksky.fetch = function(lat, long, callback, error) {
+        var path = darksky.getPath(defaults.pathRoot,lat,long,defaults.secret,defaults.exclude);
+
+        fetcher.getHttps({
             "host": defaults.endpoint,
             "path": path
         }, callback, error);
@@ -30,7 +38,7 @@ module.exports = (defaults, fetch) => {
     darksky.standardizeResponse = function(data, success) {
         var json = JSON.parse(data);
         var result = {
-            "report": `${defaults.reportPath}/${json.latitude},${json.longitude}`,
+            "report": darksky.getPath(defaults.reportPath,json.latitude,json.longitude),
             "lat": json.latitude,
             "long": json.longitude,
             "current": {

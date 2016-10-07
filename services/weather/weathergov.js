@@ -1,4 +1,4 @@
-module.exports = (defaults, fetch) => {
+module.exports = (defaults, fetcher) => {
     defaults.unit = defaults.unit || 0;
     defaults.lg = defaults.lg || "english";
     defaults.fcstType = defaults.fcstType || "json";
@@ -26,7 +26,7 @@ module.exports = (defaults, fetch) => {
     weathergov.fetch = function(lat, long, callback, error) {
         var path = weathergov.getPath(lat, long, true);
 
-        fetch.getHttp({
+        fetcher.getHttp({
             "host": defaults.endpoint,
             "path": path,
             "headers": {
