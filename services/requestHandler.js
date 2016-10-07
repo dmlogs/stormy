@@ -1,6 +1,16 @@
-module.exports = () => {
+module.exports = (sources) => {
     return {
-        get: function(req, res, fn) {
+        get: function(req, res, source) {
+            console.log(`source is:${source}`);
+            if (!source) {
+              res.status(400).send("no source provided.");
+              return;
+            }
+            if (!sources.hasOwnProperty(source)) {
+              res.status(400).send(`source "${source}" is unknown.`);
+              return;
+            }
+
             if (!req.query.lat) {
                 res.status(400).send("missing latitude.");
                 return;
@@ -10,7 +20,9 @@ module.exports = () => {
                 return;
             }
 
-            var lat = req.query.lat, long = req.query.long;
+            var src = sources[source],
+              lat = req.query.lat,
+              long = req.query.long;
 
             function success (body) {
               res.status(200).send(body);
@@ -22,13 +34,13 @@ module.exports = () => {
 
             if (req.query.f == "std") {
                 try {
-                  fn.getStandardized(lat,long, success, error);
+                  src.getStandardized(lat,long, success, error);
                 } catch (e) {
                   res.status(500).send(`An error occurred processing the returned data: \n\n${e}`)
                 }
             }
             else {
-              fn.getRaw(lat,long, success, error);
+              src.getRaw(lat,long, success, error);
             }
         }
     }

@@ -85,7 +85,7 @@ module.exports = (defaults, fetch) => {
 
         }
 
-        // assert temp is not blank
+        // assert temp is populated (if no weather data returned by weathergov)
         if (temp.timestamp) {
             result.daily.push(temp);
         }

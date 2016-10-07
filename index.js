@@ -1,9 +1,12 @@
 var express = require('express');
 var config = require('config');
-var requestHandler = require('./services/requestHandler.js')();
 var fetch = require('./services/fetch.js')();
-var weathergov = require('./services/weathergov.js')(config.get("weathergov"), fetch);
-var darksky = require('./services/darksky.js')(config.get("darksky"), fetch);
+var weathergov = require('./services/weather/weathergov.js')(config.get("weathergov"), fetch);
+var darksky = require('./services/weather/darksky.js')(config.get("darksky"), fetch);
+var requestHandler = require('./services/requestHandler.js')({
+  "weathergov":weathergov,
+  "darksky":darksky
+});
 
 var app = express();
 
@@ -11,12 +14,8 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 app.use(express.static('public'));
 
-app.get('/api/external/weathergov', function(req, res) {
-    requestHandler.get(req, res, weathergov);
-});
-
-app.get('/api/external/darksky', function(req, res) {
-    requestHandler.get(req,res,darksky);
+app.get('/api/external/:source', function(req, res) {
+    requestHandler.get(req, res, req.params.source);
 });
 
 var port = process.env.PORT || config.get("port");
