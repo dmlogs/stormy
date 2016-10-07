@@ -1,8 +1,8 @@
 var express = require('express');
 var config = require('config');
-var fetch = require('./services/fetch.js')();
-var weathergov = require('./services/weather/weathergov.js')(config.get("weathergov"), fetch);
-var darksky = require('./services/weather/darksky.js')(config.get("darksky"), fetch);
+var simpleFetcher = require('./services/SimpleFetcher.js')();
+var weathergov = require('./services/weather/weathergov.js')(config.get("weathergov"), simpleFetcher);
+var darksky = require('./services/weather/darksky.js')(config.get("darksky"), simpleFetcher);
 var requestHandler = require('./services/requestHandler.js')({
   "weathergov":weathergov,
   "darksky":darksky
