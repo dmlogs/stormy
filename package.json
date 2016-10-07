@@ -1,6 +1,6 @@
 {
     "name": "stormy",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "weather data aggregator",
     "main": "index.js",
     "scripts": {
