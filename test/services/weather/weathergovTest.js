@@ -3,8 +3,8 @@ var assert = chai.assert;
 var fs = require('fs');
 
 describe("weathergov", function() {
-    var weathergovConstructor = require('./../../services/weather/weathergov.js'),
-        MockFetcher = require('./../mocks/MockFetcher.js'),
+    var weathergovConstructor = require('./../../../services/weather/weathergov.js'),
+        MockFetcher = require('./../../mocks/MockFetcher.js'),
         defaults = {
             "endpoint": "forecast.weather.gov",
             "pathRoot": "/MapClick.php?",

@@ -3,8 +3,8 @@ var assert = chai.assert;
 var fs = require('fs');
 
 describe("darksky", function() {
-    var darkskyConstructor = require('./../../services/weather/darksky.js'),
-        MockFetcher = require('./../mocks/MockFetcher.js'),
+    var darkskyConstructor = require('./../../../services/weather/darksky.js'),
+        MockFetcher = require('./../../mocks/MockFetcher.js'),
         defaults = {
             "endpoint": "api.darksky.net",
             "pathRoot": "/forecast",
