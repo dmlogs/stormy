@@ -12,4 +12,8 @@ module.exports = function MockReq() {
         this.setLat(lat);
         this.setLong(long);
     }
+
+    this.setStd = function() {
+      this.query.f = "std";
+    }
 };
