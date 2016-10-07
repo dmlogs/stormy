@@ -1,7 +1,6 @@
 module.exports = (sources) => {
     return {
         get: function(req, res, source) {
-            console.log(`source is:${source}`);
             if (!source) {
               res.status(400).send("no source provided.");
               return;
