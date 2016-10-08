@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(name="stormy", content="application/xhtml+xml")
+    meta(charset="UTF-8")
+    title stormy
+    link(rel="stylesheet", type="text/css", href="css/styles.css")
+    script(type="text/javascript", src="https://code.jquery.com/jquery-3.1.0.min.js")
+    script(type="text/javascript", src= "https://maps.googleapis.com/maps/api/js?key=" + browserApiKey + "&libraries=places")
+    script(type="text/javascript", src="js/stormy-location.js")
+  body
+    div(id="inputs")
+      div(class="container table")
+        div(class="row")
+          div(class="cell")
+            span= "Location: "
+          div(class="cell")
+            input(type="text", id="location")
+    div(id="outputs")

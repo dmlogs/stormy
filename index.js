@@ -14,6 +14,11 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 app.use(express.static('public'));
 
+app.get('/', function(req,res) {
+  var locals = { 'browserApiKey': config.get("google.api.keys.browser")};
+  res.render('index',locals);
+});
+
 app.get('/api/external/:source', function(req, res) {
     requestHandler.get(req, res, req.params.source);
 });

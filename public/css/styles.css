@@ -1,0 +1,45 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body, input {
+  font-family: Verdana, sans-serif;
+}
+
+#inputs {
+  background-color: #4690F0;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#inputs span {
+  color: white;
+}
+
+#outputs {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.table {
+  display: table;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 10px;
+}
+
+#inputs .cell {
+  min-width: 100px;
+}
